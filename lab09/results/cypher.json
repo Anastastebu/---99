@@ -1,0 +1,108 @@
+{
+  "1": [
+    {
+      "vm": "vm_01"
+    }
+  ],
+  "2": [
+    {
+      "sensor": "sensor_01"
+    },
+    {
+      "sensor": "sensor_05"
+    }
+  ],
+  "3": [
+    {
+      "incident": "inc_01"
+    }
+  ],
+  "4": [
+    {
+      "site": "site_1",
+      "incidents": 5
+    },
+    {
+      "site": "site_2",
+      "incidents": 5
+    },
+    {
+      "site": "site_3",
+      "incidents": 5
+    },
+    {
+      "site": "site_4",
+      "incidents": 5
+    }
+  ],
+  "5": [
+    {
+      "vm": "vm_01",
+      "dependency": "vm_02"
+    }
+  ],
+  "6": [
+    {
+      "route": [
+        "vm_01",
+        "vm_02",
+        "vm_03",
+        "vm_04",
+        "vm_05"
+      ],
+      "hops": 4
+    }
+  ],
+  "7": [
+    {
+      "firewall": "fw_01",
+      "source": "LR09-demo-rule-v1"
+    },
+    {
+      "firewall": "fw_05",
+      "source": "LR09-demo-rule-v1"
+    }
+  ],
+  "8": [
+    {
+      "vm": "vm_05",
+      "dependency": null
+    }
+  ],
+  "9": [
+    {
+      "dependency": "vm_02",
+      "depth": 1
+    },
+    {
+      "dependency": "vm_03",
+      "depth": 2
+    },
+    {
+      "dependency": "vm_04",
+      "depth": 3
+    },
+    {
+      "dependency": "vm_05",
+      "depth": 4
+    }
+  ],
+  "10": [
+    {
+      "affected": "vm_04",
+      "depth": 1
+    },
+    {
+      "affected": "vm_03",
+      "depth": 2
+    },
+    {
+      "affected": "vm_02",
+      "depth": 3
+    },
+    {
+      "affected": "vm_01",
+      "depth": 4
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+digraph Lab09 {
+  graph [bgcolor="white", pad=.35, nodesep=.45, ranksep=.8, labelloc=t,
+         fontname="DejaVu Sans", fontsize=20, label="Графова схема IT-інфраструктури"];
+  node [shape=box, style="rounded,filled", color="#9CB5C9", fillcolor="#EAF3FA",
+        fontname="DejaVu Sans", fontsize=13, margin=".20,.13"];
+  edge [fontname="DejaVu Sans", fontsize=10, color="#425D70", fontcolor="#253E50"];
+  ComputeServer -> Hypervisor [label="HOSTS_RESOURCE"];
+  Hypervisor -> VirtualMachine [label="RUNS_VIRTUAL_MACHINE"];
+  VirtualMachine -> Hypervisor [label="IS_HOSTED_ON", constraint=false];
+  VirtualMachine -> VirtualMachine [label="DEPENDS_ON"];
+  Firewall -> VirtualMachine [label="PROTECTS"];
+  Sensor -> ComputeServer [label="MONITORS_RESOURCE"];
+  Incident -> VirtualMachine [label="AFFECTS"];
+  Incident -> Sensor [label="DETECTED_BY"];
+  Incident [label="Incident\nseverity: string"];
+  key [shape=note, color="#C9C1A5", fillcolor="#FFF8E5",
+       label="Усі вузли також мають мітку Resource\nid, name, site: string\n\nУсі зв’язки мають походження\nsource: string, confidence: float, validFrom: date"];
+  {rank=same; Sensor; Incident; Firewall;}
+  {rank=same; VirtualMachine; key;}
+  VirtualMachine -> key [style=invis];
+}

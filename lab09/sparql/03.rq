@@ -1,0 +1,4 @@
+PREFIX it: <http://example.org/it_infrastructure#>
+SELECT ?incident WHERE {
+  ?i a it:Incident ; it:severity "high" ; it:affects it:vm_02 ; it:id ?incident .
+} ORDER BY ?incident

@@ -1,0 +1,23 @@
+Роль: експерт з графового моделювання. Перетвори кожне з десяти CQ з docs/cq_mapping.md на один Cypher 5 запит. Наведи id і сирий Cypher. Запит має бути тільки для читання, починатися з MATCH і закінчуватися LIMIT 100. Для списків додай ORDER BY. Повертай імена колонок з docs/cq_mapping.md.
+Схема: усі вузли мають Resource, id, name, site. Incident має severity.
+ComputeServer-[:HOSTS_RESOURCE]->Hypervisor
+Hypervisor-[:RUNS_VIRTUAL_MACHINE]->VirtualMachine
+VirtualMachine-[:IS_HOSTED_ON]->Hypervisor
+Sensor-[:MONITORS_RESOURCE]->ComputeServer
+Firewall-[:PROTECTS]->VirtualMachine
+Incident-[:AFFECTS]->VirtualMachine
+Incident-[:DETECTED_BY]->Sensor
+VirtualMachine-[:DEPENDS_ON]->VirtualMachine
+На зв’язках source (string), confidence (float), validFrom (date).
+
+Поверни рівно 10 рядків JSONL без Markdown. Ключі: id (ціле число), question (текст питання), candidate (Cypher).
+1. Які ВМ працюють на srv_01 через гіпервізор? Колонки: vm.
+2. Які сенсори моніторять srv_01? Колонки: sensor.
+3. Які інциденти high зачепили vm_02? Колонки: incident.
+4. Скільки різних інцидентів виявлено сенсорами кожного майданчика? Колонки: site, incidents.
+5. Яка безпосередня залежність vm_01? Колонки: vm, dependency.
+6. Який найкоротший маршрут залежностей vm_01 → vm_05? Колонки: route, hops.
+7. Які Firewall захищають vm_01 зі confidence ≥ 0.9 станом на 2026-11-18? Колонки: firewall, source.
+8. Яка безпосередня залежність vm_05, якщо вона є? Колонки: vm, dependency.
+9. Від яких ВМ залежить vm_01 на глибині 1–4? Колонки: dependency, depth.
+10. Які ВМ постраждають при відмові vm_05 на глибині 1–4? Колонки: affected, depth.

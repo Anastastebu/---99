@@ -1,0 +1,5 @@
+PREFIX it: <http://example.org/it_infrastructure#>
+SELECT ?vm WHERE {
+  it:srv_01 it:hostsResource/it:runsVirtualMachine ?v .
+  ?v it:id ?vm .
+} ORDER BY ?vm

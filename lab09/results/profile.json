@@ -1,0 +1,403 @@
+{
+  "before": {
+    "query": "MATCH (n:Resource) USING SCAN n:Resource WHERE n.site='site_1' RETURN count(n) AS total",
+    "result": [
+      {
+        "total": 30
+      }
+    ],
+    "db_hits": 361,
+    "profile": {
+      "args": {
+        "GlobalMemory": 472,
+        "planner-impl": "IDP",
+        "Memory": 0,
+        "string-representation": "Cypher 5\n\nPlanner COST\n\nRuntime PIPELINED\n\nRuntime version 5.26\n\nBatch size 128\n\n+-------------------+----+------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| Operator          | Id | Details                | Estimated Rows | Rows | DB Hits | Memory (Bytes) | Page Cache Hits/Misses | Time (ms) | Pipeline            |\n+-------------------+----+------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| +ProduceResults   |  0 | total                  |              1 |    1 |       0 |              0 |                    0/0 |     0.871 | In Pipeline 1       |\n| |                 +----+------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| +EagerAggregation |  1 | count(n) AS total      |              1 |    1 |       0 |             32 |                        |           |                     |\n| |                 +----+------------------------+----------------+------+---------+----------------+                        |           |                     |\n| +Filter           |  2 | n.site = $autostring_0 |             30 |   30 |     240 |                |                        |           |                     |\n| |                 +----+------------------------+----------------+------+---------+----------------+                        |           |                     |\n| +NodeByLabelScan  |  3 | n:Resource             |            120 |  120 |     121 |            376 |                    3/0 |     7.444 | Fused in Pipeline 0 |\n+-------------------+----+------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n\nTotal database accesses: 361, total allocated memory: 472\n",
+        "runtime": "PIPELINED",
+        "Time": 871214,
+        "runtime-impl": "PIPELINED",
+        "version": "5",
+        "DbHits": 0,
+        "batch-size": 128,
+        "Details": "total",
+        "planner-version": "5.26",
+        "PipelineInfo": "In Pipeline 1",
+        "runtime-version": "5.26",
+        "Id": 0,
+        "EstimatedRows": 1.0,
+        "planner": "COST",
+        "PageCacheMisses": 0,
+        "Rows": 1,
+        "PageCacheHits": 0
+      },
+      "pageCacheMisses": 0,
+      "children": [
+        {
+          "args": {
+            "Details": "count(n) AS total",
+            "Memory": 32,
+            "PipelineInfo": "Fused in Pipeline 0",
+            "Id": 1,
+            "EstimatedRows": 1.0,
+            "DbHits": 0,
+            "Rows": 1
+          },
+          "children": [
+            {
+              "args": {
+                "Details": "n.site = $autostring_0",
+                "PipelineInfo": "Fused in Pipeline 0",
+                "Id": 2,
+                "EstimatedRows": 30.0,
+                "DbHits": 240,
+                "Rows": 30
+              },
+              "children": [
+                {
+                  "args": {
+                    "Details": "n:Resource",
+                    "PipelineInfo": "Fused in Pipeline 0",
+                    "Memory": 376,
+                    "Time": 7444015,
+                    "Id": 3,
+                    "EstimatedRows": 120.0,
+                    "PageCacheMisses": 0,
+                    "DbHits": 121,
+                    "Rows": 120,
+                    "PageCacheHits": 3
+                  },
+                  "pageCacheMisses": 0,
+                  "dbHits": 121,
+                  "identifiers": [
+                    "n"
+                  ],
+                  "operatorType": "NodeByLabelScan@neo4j",
+                  "time": 7444015,
+                  "rows": 120,
+                  "pageCacheHitRatio": 1.0,
+                  "pageCacheHits": 3
+                }
+              ],
+              "dbHits": 240,
+              "identifiers": [
+                "n"
+              ],
+              "operatorType": "Filter@neo4j",
+              "rows": 30
+            }
+          ],
+          "dbHits": 0,
+          "identifiers": [
+            "total"
+          ],
+          "operatorType": "EagerAggregation@neo4j",
+          "rows": 1
+        }
+      ],
+      "dbHits": 0,
+      "identifiers": [
+        "total"
+      ],
+      "operatorType": "ProduceResults@neo4j",
+      "time": 871214,
+      "rows": 1,
+      "pageCacheHitRatio": 0.0,
+      "pageCacheHits": 0
+    }
+  },
+  "after": {
+    "query": "MATCH (n:Resource) USING INDEX n:Resource(site) WHERE n.site='site_1' RETURN count(n) AS total",
+    "result": [
+      {
+        "total": 30
+      }
+    ],
+    "db_hits": 31,
+    "profile": {
+      "args": {
+        "GlobalMemory": 472,
+        "planner-impl": "IDP",
+        "Memory": 0,
+        "string-representation": "Cypher 5\n\nPlanner COST\n\nRuntime PIPELINED\n\nRuntime version 5.26\n\nBatch size 128\n\n+-------------------+----+---------------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| Operator          | Id | Details                                                 | Estimated Rows | Rows | DB Hits | Memory (Bytes) | Page Cache Hits/Misses | Time (ms) | Pipeline            |\n+-------------------+----+---------------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| +ProduceResults   |  0 | total                                                   |              1 |    1 |       0 |              0 |                    0/0 |     0.125 | In Pipeline 1       |\n| |                 +----+---------------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| +EagerAggregation |  1 | count(n) AS total                                       |              1 |    1 |       0 |             32 |                        |           |                     |\n| |                 +----+---------------------------------------------------------+----------------+------+---------+----------------+                        |           |                     |\n| +NodeIndexSeek    |  2 | RANGE INDEX n:Resource(site) WHERE site = $autostring_0 |             30 |   30 |      31 |            376 |                    1/0 |     1.300 | Fused in Pipeline 0 |\n+-------------------+----+---------------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n\nTotal database accesses: 31, total allocated memory: 472\n",
+        "runtime": "PIPELINED",
+        "Time": 125148,
+        "runtime-impl": "PIPELINED",
+        "version": "5",
+        "DbHits": 0,
+        "batch-size": 128,
+        "Details": "total",
+        "planner-version": "5.26",
+        "PipelineInfo": "In Pipeline 1",
+        "runtime-version": "5.26",
+        "Id": 0,
+        "EstimatedRows": 1.0,
+        "planner": "COST",
+        "PageCacheMisses": 0,
+        "Rows": 1,
+        "PageCacheHits": 0
+      },
+      "pageCacheMisses": 0,
+      "children": [
+        {
+          "args": {
+            "Details": "count(n) AS total",
+            "Memory": 32,
+            "PipelineInfo": "Fused in Pipeline 0",
+            "Id": 1,
+            "EstimatedRows": 1.0,
+            "DbHits": 0,
+            "Rows": 1
+          },
+          "children": [
+            {
+              "args": {
+                "Details": "RANGE INDEX n:Resource(site) WHERE site = $autostring_0",
+                "PipelineInfo": "Fused in Pipeline 0",
+                "Memory": 376,
+                "Time": 1299670,
+                "Id": 2,
+                "EstimatedRows": 30.0,
+                "PageCacheMisses": 0,
+                "DbHits": 31,
+                "Rows": 30,
+                "PageCacheHits": 1
+              },
+              "pageCacheMisses": 0,
+              "dbHits": 31,
+              "identifiers": [
+                "n"
+              ],
+              "operatorType": "NodeIndexSeek@neo4j",
+              "time": 1299670,
+              "rows": 30,
+              "pageCacheHitRatio": 1.0,
+              "pageCacheHits": 1
+            }
+          ],
+          "dbHits": 0,
+          "identifiers": [
+            "total"
+          ],
+          "operatorType": "EagerAggregation@neo4j",
+          "rows": 1
+        }
+      ],
+      "dbHits": 0,
+      "identifiers": [
+        "total"
+      ],
+      "operatorType": "ProduceResults@neo4j",
+      "time": 125148,
+      "rows": 1,
+      "pageCacheHitRatio": 0.0,
+      "pageCacheHits": 0
+    }
+  },
+  "shortest_path": {
+    "query": "MATCH (a:VirtualMachine {id:'vm_01'}), (b:VirtualMachine {id:'vm_05'})\nMATCH p = shortestPath((a)-[:DEPENDS_ON*..6]->(b))\nRETURN [n IN nodes(p) | n.id] AS route, length(p) AS hops",
+    "result": [
+      {
+        "route": [
+          "vm_01",
+          "vm_02",
+          "vm_03",
+          "vm_04",
+          "vm_05"
+        ],
+        "hops": 4
+      }
+    ],
+    "db_hits": 140,
+    "profile": {
+      "args": {
+        "GlobalMemory": 5216,
+        "planner-impl": "IDP",
+        "Memory": 0,
+        "string-representation": "Cypher 5\n\nPlanner COST\n\nRuntime PIPELINED\n\nRuntime version 5.26\n\nBatch size 128\n\n+--------------------+----+----------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| Operator           | Id | Details                                            | Estimated Rows | Rows | DB Hits | Memory (Bytes) | Page Cache Hits/Misses | Time (ms) | Pipeline            |\n+--------------------+----+----------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| +ProduceResults    |  0 | route, hops                                        |              1 |    1 |       0 |              0 |                        |           |                     |\n| |                  +----+----------------------------------------------------+----------------+------+---------+----------------+                        |           |                     |\n| +Projection        |  1 | [n IN nodes(p) | n.id] AS route, length(p) AS hops |              1 |    1 |      10 |                |                        |           |                     |\n| |                  +----+----------------------------------------------------+----------------+------+---------+----------------+                        |           |                     |\n| +ShortestPath      |  2 | p = (a)-[anon_0:DEPENDS_ON*..6]->(b)               |              1 |    1 |       8 |           3104 |                    0/0 |     2.146 | Fused in Pipeline 3 |\n| |                  +----+----------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| +CartesianProduct  |  3 |                                                    |              1 |    1 |       0 |           1872 |                        |     0.174 | In Pipeline 2       |\n| |\\                 +----+----------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| | +Filter          |  4 | b.id = $autostring_1                               |              1 |    1 |      40 |                |                        |           |                     |\n| | |                +----+----------------------------------------------------+----------------+------+---------+----------------+                        |           |                     |\n| | +NodeByLabelScan |  5 | b:VirtualMachine                                   |             20 |   20 |      21 |            392 |                    1/0 |     0.777 | Fused in Pipeline 1 |\n| |                  +----+----------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n| +Filter            |  6 | a.id = $autostring_0                               |              1 |    1 |      40 |                |                        |           |                     |\n| |                  +----+----------------------------------------------------+----------------+------+---------+----------------+                        |           |                     |\n| +NodeByLabelScan   |  7 | a:VirtualMachine                                   |             20 |   20 |      21 |            376 |                    2/0 |     1.297 | Fused in Pipeline 0 |\n+--------------------+----+----------------------------------------------------+----------------+------+---------+----------------+------------------------+-----------+---------------------+\n\nTotal database accesses: 140, total allocated memory: 5216\n",
+        "runtime": "PIPELINED",
+        "runtime-impl": "PIPELINED",
+        "version": "5",
+        "DbHits": 0,
+        "batch-size": 128,
+        "Details": "route, hops",
+        "planner-version": "5.26",
+        "PipelineInfo": "Fused in Pipeline 3",
+        "runtime-version": "5.26",
+        "Id": 0,
+        "EstimatedRows": 1.0000000000000002,
+        "planner": "COST",
+        "Rows": 1
+      },
+      "children": [
+        {
+          "args": {
+            "Details": "[n IN nodes(p) | n.id] AS route, length(p) AS hops",
+            "PipelineInfo": "Fused in Pipeline 3",
+            "Id": 1,
+            "EstimatedRows": 1.0000000000000002,
+            "DbHits": 10,
+            "Rows": 1
+          },
+          "children": [
+            {
+              "args": {
+                "Details": "p = (a)-[anon_0:DEPENDS_ON*..6]->(b)",
+                "PipelineInfo": "Fused in Pipeline 3",
+                "Memory": 3104,
+                "Time": 2145670,
+                "Id": 2,
+                "EstimatedRows": 1.0000000000000002,
+                "PageCacheMisses": 0,
+                "DbHits": 8,
+                "Rows": 1,
+                "PageCacheHits": 0
+              },
+              "pageCacheMisses": 0,
+              "children": [
+                {
+                  "args": {
+                    "Memory": 1872,
+                    "PipelineInfo": "In Pipeline 2",
+                    "Time": 174402,
+                    "Id": 3,
+                    "EstimatedRows": 1.0000000000000002,
+                    "DbHits": 0,
+                    "Rows": 1
+                  },
+                  "children": [
+                    {
+                      "args": {
+                        "Details": "a.id = $autostring_0",
+                        "PipelineInfo": "Fused in Pipeline 0",
+                        "Id": 6,
+                        "EstimatedRows": 1.0,
+                        "DbHits": 40,
+                        "Rows": 1
+                      },
+                      "children": [
+                        {
+                          "args": {
+                            "Details": "a:VirtualMachine",
+                            "PipelineInfo": "Fused in Pipeline 0",
+                            "Memory": 376,
+                            "Time": 1297355,
+                            "Id": 7,
+                            "EstimatedRows": 20.0,
+                            "PageCacheMisses": 0,
+                            "DbHits": 21,
+                            "Rows": 20,
+                            "PageCacheHits": 2
+                          },
+                          "pageCacheMisses": 0,
+                          "dbHits": 21,
+                          "identifiers": [
+                            "a"
+                          ],
+                          "operatorType": "NodeByLabelScan@neo4j",
+                          "time": 1297355,
+                          "rows": 20,
+                          "pageCacheHitRatio": 1.0,
+                          "pageCacheHits": 2
+                        }
+                      ],
+                      "dbHits": 40,
+                      "identifiers": [
+                        "a"
+                      ],
+                      "operatorType": "Filter@neo4j",
+                      "rows": 1
+                    },
+                    {
+                      "args": {
+                        "Details": "b.id = $autostring_1",
+                        "PipelineInfo": "Fused in Pipeline 1",
+                        "Id": 4,
+                        "EstimatedRows": 1.0,
+                        "DbHits": 40,
+                        "Rows": 1
+                      },
+                      "children": [
+                        {
+                          "args": {
+                            "Details": "b:VirtualMachine",
+                            "PipelineInfo": "Fused in Pipeline 1",
+                            "Memory": 392,
+                            "Time": 776802,
+                            "Id": 5,
+                            "EstimatedRows": 20.0,
+                            "PageCacheMisses": 0,
+                            "DbHits": 21,
+                            "Rows": 20,
+                            "PageCacheHits": 1
+                          },
+                          "pageCacheMisses": 0,
+                          "dbHits": 21,
+                          "identifiers": [
+                            "b"
+                          ],
+                          "operatorType": "NodeByLabelScan@neo4j",
+                          "time": 776802,
+                          "rows": 20,
+                          "pageCacheHitRatio": 1.0,
+                          "pageCacheHits": 1
+                        }
+                      ],
+                      "dbHits": 40,
+                      "identifiers": [
+                        "b"
+                      ],
+                      "operatorType": "Filter@neo4j",
+                      "rows": 1
+                    }
+                  ],
+                  "dbHits": 0,
+                  "identifiers": [
+                    "a",
+                    "b"
+                  ],
+                  "operatorType": "CartesianProduct@neo4j",
+                  "time": 174402,
+                  "rows": 1
+                }
+              ],
+              "dbHits": 8,
+              "identifiers": [
+                "a",
+                "b",
+                "p",
+                "anon_0"
+              ],
+              "operatorType": "ShortestPath@neo4j",
+              "time": 2145670,
+              "rows": 1,
+              "pageCacheHitRatio": 0.0,
+              "pageCacheHits": 0
+            }
+          ],
+          "dbHits": 10,
+          "identifiers": [
+            "a",
+            "anon_0",
+            "b",
+            "p",
+            "hops",
+            "route"
+          ],
+          "operatorType": "Projection@neo4j",
+          "rows": 1
+        }
+      ],
+      "dbHits": 0,
+      "identifiers": [
+        "a",
+        "anon_0",
+        "b",
+        "p",
+        "hops",
+        "route"
+      ],
+      "operatorType": "ProduceResults@neo4j",
+      "rows": 1
+    }
+  }
+}

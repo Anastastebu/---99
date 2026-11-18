@@ -1,0 +1,2568 @@
+@prefix it: <http://example.org/it_infrastructure#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+it:edge_001 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_01 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_01 .
+
+it:edge_002 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_01 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_01 .
+
+it:edge_003 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_01 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_01 .
+
+it:edge_004 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_01 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_01 .
+
+it:edge_005 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_01 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_01 .
+
+it:edge_006 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_01 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_01 .
+
+it:edge_007 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_01 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_01 .
+
+it:edge_008 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_02 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_01 .
+
+it:edge_009 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_02 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_01 .
+
+it:edge_010 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_02 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_01 .
+
+it:edge_011 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_02 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_01 .
+
+it:edge_012 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_02 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_02 .
+
+it:edge_013 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_02 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_02 .
+
+it:edge_014 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_02 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_02 .
+
+it:edge_015 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_02 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_02 .
+
+it:edge_016 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_02 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_02 .
+
+it:edge_017 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_02 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_02 .
+
+it:edge_018 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_02 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_02 .
+
+it:edge_019 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_03 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_02 .
+
+it:edge_020 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_03 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_02 .
+
+it:edge_021 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_03 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_02 .
+
+it:edge_022 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_03 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_02 .
+
+it:edge_023 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_03 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_03 .
+
+it:edge_024 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_03 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_03 .
+
+it:edge_025 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_03 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_03 .
+
+it:edge_026 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_03 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_03 .
+
+it:edge_027 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_03 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_03 .
+
+it:edge_028 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_03 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_03 .
+
+it:edge_029 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_03 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_03 .
+
+it:edge_030 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_04 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_03 .
+
+it:edge_031 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_04 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_03 .
+
+it:edge_032 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_04 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_03 .
+
+it:edge_033 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_04 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_03 .
+
+it:edge_034 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_04 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_04 .
+
+it:edge_035 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_04 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_04 .
+
+it:edge_036 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_04 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_04 .
+
+it:edge_037 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_04 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_04 .
+
+it:edge_038 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_04 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_04 .
+
+it:edge_039 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_04 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_04 .
+
+it:edge_040 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_04 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_04 .
+
+it:edge_041 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_05 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_04 .
+
+it:edge_042 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_05 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_04 .
+
+it:edge_043 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_05 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_04 .
+
+it:edge_044 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_05 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_04 .
+
+it:edge_045 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_05 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_05 .
+
+it:edge_046 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_05 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_05 .
+
+it:edge_047 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_05 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_05 .
+
+it:edge_048 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_05 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_05 .
+
+it:edge_049 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_05 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_05 .
+
+it:edge_050 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_05 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_05 .
+
+it:edge_051 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_05 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_05 .
+
+it:edge_052 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_01 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_05 .
+
+it:edge_053 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_01 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_05 .
+
+it:edge_054 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_01 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_05 .
+
+it:edge_055 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_06 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_06 .
+
+it:edge_056 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_06 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_06 .
+
+it:edge_057 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_06 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_06 .
+
+it:edge_058 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_06 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_06 .
+
+it:edge_059 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_06 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_06 .
+
+it:edge_060 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_06 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_06 .
+
+it:edge_061 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_06 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_06 .
+
+it:edge_062 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_07 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_06 .
+
+it:edge_063 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_07 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_06 .
+
+it:edge_064 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_07 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_06 .
+
+it:edge_065 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_07 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_06 .
+
+it:edge_066 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_07 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_07 .
+
+it:edge_067 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_07 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_07 .
+
+it:edge_068 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_07 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_07 .
+
+it:edge_069 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_07 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_07 .
+
+it:edge_070 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_07 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_07 .
+
+it:edge_071 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_07 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_07 .
+
+it:edge_072 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_07 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_07 .
+
+it:edge_073 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_08 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_07 .
+
+it:edge_074 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_08 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_07 .
+
+it:edge_075 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_08 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_07 .
+
+it:edge_076 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_08 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_07 .
+
+it:edge_077 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_08 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_08 .
+
+it:edge_078 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_08 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_08 .
+
+it:edge_079 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_08 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_08 .
+
+it:edge_080 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_08 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_08 .
+
+it:edge_081 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_08 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_08 .
+
+it:edge_082 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_08 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_08 .
+
+it:edge_083 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_08 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_08 .
+
+it:edge_084 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_09 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_08 .
+
+it:edge_085 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_09 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_08 .
+
+it:edge_086 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_09 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_08 .
+
+it:edge_087 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_09 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_08 .
+
+it:edge_088 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_09 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_09 .
+
+it:edge_089 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_09 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_09 .
+
+it:edge_090 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_09 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_09 .
+
+it:edge_091 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_09 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_09 .
+
+it:edge_092 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_09 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_09 .
+
+it:edge_093 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_09 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_09 .
+
+it:edge_094 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_09 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_09 .
+
+it:edge_095 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_10 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_09 .
+
+it:edge_096 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_10 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_09 .
+
+it:edge_097 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_10 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_09 .
+
+it:edge_098 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_10 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_09 .
+
+it:edge_099 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_10 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_10 .
+
+it:edge_100 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_10 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_10 .
+
+it:edge_101 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_10 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_10 .
+
+it:edge_102 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_10 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_10 .
+
+it:edge_103 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_10 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_10 .
+
+it:edge_104 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_10 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_10 .
+
+it:edge_105 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_10 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_10 .
+
+it:edge_106 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_06 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_10 .
+
+it:edge_107 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_06 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_10 .
+
+it:edge_108 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_06 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_10 .
+
+it:edge_109 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_11 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_11 .
+
+it:edge_110 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_11 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_11 .
+
+it:edge_111 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_11 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_11 .
+
+it:edge_112 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_11 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_11 .
+
+it:edge_113 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_11 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_11 .
+
+it:edge_114 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_11 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_11 .
+
+it:edge_115 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_11 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_11 .
+
+it:edge_116 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_12 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_11 .
+
+it:edge_117 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_12 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_11 .
+
+it:edge_118 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_12 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_11 .
+
+it:edge_119 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_12 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_11 .
+
+it:edge_120 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_12 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_12 .
+
+it:edge_121 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_12 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_12 .
+
+it:edge_122 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_12 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_12 .
+
+it:edge_123 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_12 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_12 .
+
+it:edge_124 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_12 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_12 .
+
+it:edge_125 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_12 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_12 .
+
+it:edge_126 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_12 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_12 .
+
+it:edge_127 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_13 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_12 .
+
+it:edge_128 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_13 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_12 .
+
+it:edge_129 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_13 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_12 .
+
+it:edge_130 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_13 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_12 .
+
+it:edge_131 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_13 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_13 .
+
+it:edge_132 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_13 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_13 .
+
+it:edge_133 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_13 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_13 .
+
+it:edge_134 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_13 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_13 .
+
+it:edge_135 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_13 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_13 .
+
+it:edge_136 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_13 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_13 .
+
+it:edge_137 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_13 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_13 .
+
+it:edge_138 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_14 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_13 .
+
+it:edge_139 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_14 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_13 .
+
+it:edge_140 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_14 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_13 .
+
+it:edge_141 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_14 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_13 .
+
+it:edge_142 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_14 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_14 .
+
+it:edge_143 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_14 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_14 .
+
+it:edge_144 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_14 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_14 .
+
+it:edge_145 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_14 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_14 .
+
+it:edge_146 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_14 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_14 .
+
+it:edge_147 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_14 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_14 .
+
+it:edge_148 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_14 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_14 .
+
+it:edge_149 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_15 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_14 .
+
+it:edge_150 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_15 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_14 .
+
+it:edge_151 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_15 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_14 .
+
+it:edge_152 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_15 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_14 .
+
+it:edge_153 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_15 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_15 .
+
+it:edge_154 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_15 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_15 .
+
+it:edge_155 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_15 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_15 .
+
+it:edge_156 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_15 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_15 .
+
+it:edge_157 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_15 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_15 .
+
+it:edge_158 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_15 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_15 .
+
+it:edge_159 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_15 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_15 .
+
+it:edge_160 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_11 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_15 .
+
+it:edge_161 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_11 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_15 .
+
+it:edge_162 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_11 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_15 .
+
+it:edge_163 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_16 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_16 .
+
+it:edge_164 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_16 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_16 .
+
+it:edge_165 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_16 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_16 .
+
+it:edge_166 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_16 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_16 .
+
+it:edge_167 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_16 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_16 .
+
+it:edge_168 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_16 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_16 .
+
+it:edge_169 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_16 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_16 .
+
+it:edge_170 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_17 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_16 .
+
+it:edge_171 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_17 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_16 .
+
+it:edge_172 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_17 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_16 .
+
+it:edge_173 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_17 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_16 .
+
+it:edge_174 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_17 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_17 .
+
+it:edge_175 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_17 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_17 .
+
+it:edge_176 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_17 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_17 .
+
+it:edge_177 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_17 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_17 .
+
+it:edge_178 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_17 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_17 .
+
+it:edge_179 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_17 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_17 .
+
+it:edge_180 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_17 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_17 .
+
+it:edge_181 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_18 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_17 .
+
+it:edge_182 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_18 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_17 .
+
+it:edge_183 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_18 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_17 .
+
+it:edge_184 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_18 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_17 .
+
+it:edge_185 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_18 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_18 .
+
+it:edge_186 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_18 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_18 .
+
+it:edge_187 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_18 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_18 .
+
+it:edge_188 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_18 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_18 .
+
+it:edge_189 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_18 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_18 .
+
+it:edge_190 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_18 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_18 .
+
+it:edge_191 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_18 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_18 .
+
+it:edge_192 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_19 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_18 .
+
+it:edge_193 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_19 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_18 .
+
+it:edge_194 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_19 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_18 .
+
+it:edge_195 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_19 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_18 .
+
+it:edge_196 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_19 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_19 .
+
+it:edge_197 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_19 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_19 .
+
+it:edge_198 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_19 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_19 .
+
+it:edge_199 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_19 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_19 .
+
+it:edge_200 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_19 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_19 .
+
+it:edge_201 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_19 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_19 .
+
+it:edge_202 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_19 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_19 .
+
+it:edge_203 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_20 ;
+    rdf:predicate it:dependsOn ;
+    rdf:subject it:vm_19 .
+
+it:edge_204 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_20 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_19 .
+
+it:edge_205 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_20 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_19 .
+
+it:edge_206 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_20 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_19 .
+
+it:edge_207 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_20 ;
+    rdf:predicate it:hostsResource ;
+    rdf:subject it:srv_20 .
+
+it:edge_208 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_20 ;
+    rdf:predicate it:runsVirtualMachine ;
+    rdf:subject it:hyp_20 .
+
+it:edge_209 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:hyp_20 ;
+    rdf:predicate it:isHostedOn ;
+    rdf:subject it:vm_20 .
+
+it:edge_210 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_20 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_20 .
+
+it:edge_211 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_20 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_20 .
+
+it:edge_212 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_20 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_20 .
+
+it:edge_213 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:sensor_20 ;
+    rdf:predicate it:detectedBy ;
+    rdf:subject it:inc_20 .
+
+it:edge_214 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_16 ;
+    rdf:predicate it:protects ;
+    rdf:subject it:fw_20 .
+
+it:edge_215 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:vm_16 ;
+    rdf:predicate it:affects ;
+    rdf:subject it:inc_20 .
+
+it:edge_216 a rdf:Statement ;
+    it:confidence 1e+00 ;
+    it:source "LR09-demo-rule-v1" ;
+    it:validFrom "2026-11-18"^^xsd:date ;
+    rdf:object it:srv_16 ;
+    rdf:predicate it:monitorsResource ;
+    rdf:subject it:sensor_20 .
+
+it:fw_01 a it:Firewall ;
+    it:id "fw_01" ;
+    it:name "fw_01" ;
+    it:protects it:vm_01,
+        it:vm_02 ;
+    it:site "site_1" .
+
+it:fw_02 a it:Firewall ;
+    it:id "fw_02" ;
+    it:name "fw_02" ;
+    it:protects it:vm_02,
+        it:vm_03 ;
+    it:site "site_1" .
+
+it:fw_03 a it:Firewall ;
+    it:id "fw_03" ;
+    it:name "fw_03" ;
+    it:protects it:vm_03,
+        it:vm_04 ;
+    it:site "site_1" .
+
+it:fw_04 a it:Firewall ;
+    it:id "fw_04" ;
+    it:name "fw_04" ;
+    it:protects it:vm_04,
+        it:vm_05 ;
+    it:site "site_1" .
+
+it:fw_05 a it:Firewall ;
+    it:id "fw_05" ;
+    it:name "fw_05" ;
+    it:protects it:vm_01,
+        it:vm_05 ;
+    it:site "site_1" .
+
+it:fw_06 a it:Firewall ;
+    it:id "fw_06" ;
+    it:name "fw_06" ;
+    it:protects it:vm_06,
+        it:vm_07 ;
+    it:site "site_2" .
+
+it:fw_07 a it:Firewall ;
+    it:id "fw_07" ;
+    it:name "fw_07" ;
+    it:protects it:vm_07,
+        it:vm_08 ;
+    it:site "site_2" .
+
+it:fw_08 a it:Firewall ;
+    it:id "fw_08" ;
+    it:name "fw_08" ;
+    it:protects it:vm_08,
+        it:vm_09 ;
+    it:site "site_2" .
+
+it:fw_09 a it:Firewall ;
+    it:id "fw_09" ;
+    it:name "fw_09" ;
+    it:protects it:vm_09,
+        it:vm_10 ;
+    it:site "site_2" .
+
+it:fw_10 a it:Firewall ;
+    it:id "fw_10" ;
+    it:name "fw_10" ;
+    it:protects it:vm_06,
+        it:vm_10 ;
+    it:site "site_2" .
+
+it:fw_11 a it:Firewall ;
+    it:id "fw_11" ;
+    it:name "fw_11" ;
+    it:protects it:vm_11,
+        it:vm_12 ;
+    it:site "site_3" .
+
+it:fw_12 a it:Firewall ;
+    it:id "fw_12" ;
+    it:name "fw_12" ;
+    it:protects it:vm_12,
+        it:vm_13 ;
+    it:site "site_3" .
+
+it:fw_13 a it:Firewall ;
+    it:id "fw_13" ;
+    it:name "fw_13" ;
+    it:protects it:vm_13,
+        it:vm_14 ;
+    it:site "site_3" .
+
+it:fw_14 a it:Firewall ;
+    it:id "fw_14" ;
+    it:name "fw_14" ;
+    it:protects it:vm_14,
+        it:vm_15 ;
+    it:site "site_3" .
+
+it:fw_15 a it:Firewall ;
+    it:id "fw_15" ;
+    it:name "fw_15" ;
+    it:protects it:vm_11,
+        it:vm_15 ;
+    it:site "site_3" .
+
+it:fw_16 a it:Firewall ;
+    it:id "fw_16" ;
+    it:name "fw_16" ;
+    it:protects it:vm_16,
+        it:vm_17 ;
+    it:site "site_4" .
+
+it:fw_17 a it:Firewall ;
+    it:id "fw_17" ;
+    it:name "fw_17" ;
+    it:protects it:vm_17,
+        it:vm_18 ;
+    it:site "site_4" .
+
+it:fw_18 a it:Firewall ;
+    it:id "fw_18" ;
+    it:name "fw_18" ;
+    it:protects it:vm_18,
+        it:vm_19 ;
+    it:site "site_4" .
+
+it:fw_19 a it:Firewall ;
+    it:id "fw_19" ;
+    it:name "fw_19" ;
+    it:protects it:vm_19,
+        it:vm_20 ;
+    it:site "site_4" .
+
+it:fw_20 a it:Firewall ;
+    it:id "fw_20" ;
+    it:name "fw_20" ;
+    it:protects it:vm_16,
+        it:vm_20 ;
+    it:site "site_4" .
+
+it:inc_01 a it:Incident ;
+    it:affects it:vm_01,
+        it:vm_02 ;
+    it:detectedBy it:sensor_01 ;
+    it:id "inc_01" ;
+    it:name "inc_01" ;
+    it:severity "high" ;
+    it:site "site_1" .
+
+it:inc_02 a it:Incident ;
+    it:affects it:vm_02,
+        it:vm_03 ;
+    it:detectedBy it:sensor_02 ;
+    it:id "inc_02" ;
+    it:name "inc_02" ;
+    it:severity "low" ;
+    it:site "site_1" .
+
+it:inc_03 a it:Incident ;
+    it:affects it:vm_03,
+        it:vm_04 ;
+    it:detectedBy it:sensor_03 ;
+    it:id "inc_03" ;
+    it:name "inc_03" ;
+    it:severity "high" ;
+    it:site "site_1" .
+
+it:inc_04 a it:Incident ;
+    it:affects it:vm_04,
+        it:vm_05 ;
+    it:detectedBy it:sensor_04 ;
+    it:id "inc_04" ;
+    it:name "inc_04" ;
+    it:severity "low" ;
+    it:site "site_1" .
+
+it:inc_05 a it:Incident ;
+    it:affects it:vm_01,
+        it:vm_05 ;
+    it:detectedBy it:sensor_05 ;
+    it:id "inc_05" ;
+    it:name "inc_05" ;
+    it:severity "high" ;
+    it:site "site_1" .
+
+it:inc_06 a it:Incident ;
+    it:affects it:vm_06,
+        it:vm_07 ;
+    it:detectedBy it:sensor_06 ;
+    it:id "inc_06" ;
+    it:name "inc_06" ;
+    it:severity "low" ;
+    it:site "site_2" .
+
+it:inc_07 a it:Incident ;
+    it:affects it:vm_07,
+        it:vm_08 ;
+    it:detectedBy it:sensor_07 ;
+    it:id "inc_07" ;
+    it:name "inc_07" ;
+    it:severity "high" ;
+    it:site "site_2" .
+
+it:inc_08 a it:Incident ;
+    it:affects it:vm_08,
+        it:vm_09 ;
+    it:detectedBy it:sensor_08 ;
+    it:id "inc_08" ;
+    it:name "inc_08" ;
+    it:severity "low" ;
+    it:site "site_2" .
+
+it:inc_09 a it:Incident ;
+    it:affects it:vm_09,
+        it:vm_10 ;
+    it:detectedBy it:sensor_09 ;
+    it:id "inc_09" ;
+    it:name "inc_09" ;
+    it:severity "high" ;
+    it:site "site_2" .
+
+it:inc_10 a it:Incident ;
+    it:affects it:vm_06,
+        it:vm_10 ;
+    it:detectedBy it:sensor_10 ;
+    it:id "inc_10" ;
+    it:name "inc_10" ;
+    it:severity "low" ;
+    it:site "site_2" .
+
+it:inc_11 a it:Incident ;
+    it:affects it:vm_11,
+        it:vm_12 ;
+    it:detectedBy it:sensor_11 ;
+    it:id "inc_11" ;
+    it:name "inc_11" ;
+    it:severity "high" ;
+    it:site "site_3" .
+
+it:inc_12 a it:Incident ;
+    it:affects it:vm_12,
+        it:vm_13 ;
+    it:detectedBy it:sensor_12 ;
+    it:id "inc_12" ;
+    it:name "inc_12" ;
+    it:severity "low" ;
+    it:site "site_3" .
+
+it:inc_13 a it:Incident ;
+    it:affects it:vm_13,
+        it:vm_14 ;
+    it:detectedBy it:sensor_13 ;
+    it:id "inc_13" ;
+    it:name "inc_13" ;
+    it:severity "high" ;
+    it:site "site_3" .
+
+it:inc_14 a it:Incident ;
+    it:affects it:vm_14,
+        it:vm_15 ;
+    it:detectedBy it:sensor_14 ;
+    it:id "inc_14" ;
+    it:name "inc_14" ;
+    it:severity "low" ;
+    it:site "site_3" .
+
+it:inc_15 a it:Incident ;
+    it:affects it:vm_11,
+        it:vm_15 ;
+    it:detectedBy it:sensor_15 ;
+    it:id "inc_15" ;
+    it:name "inc_15" ;
+    it:severity "high" ;
+    it:site "site_3" .
+
+it:inc_16 a it:Incident ;
+    it:affects it:vm_16,
+        it:vm_17 ;
+    it:detectedBy it:sensor_16 ;
+    it:id "inc_16" ;
+    it:name "inc_16" ;
+    it:severity "low" ;
+    it:site "site_4" .
+
+it:inc_17 a it:Incident ;
+    it:affects it:vm_17,
+        it:vm_18 ;
+    it:detectedBy it:sensor_17 ;
+    it:id "inc_17" ;
+    it:name "inc_17" ;
+    it:severity "high" ;
+    it:site "site_4" .
+
+it:inc_18 a it:Incident ;
+    it:affects it:vm_18,
+        it:vm_19 ;
+    it:detectedBy it:sensor_18 ;
+    it:id "inc_18" ;
+    it:name "inc_18" ;
+    it:severity "low" ;
+    it:site "site_4" .
+
+it:inc_19 a it:Incident ;
+    it:affects it:vm_19,
+        it:vm_20 ;
+    it:detectedBy it:sensor_19 ;
+    it:id "inc_19" ;
+    it:name "inc_19" ;
+    it:severity "high" ;
+    it:site "site_4" .
+
+it:inc_20 a it:Incident ;
+    it:affects it:vm_16,
+        it:vm_20 ;
+    it:detectedBy it:sensor_20 ;
+    it:id "inc_20" ;
+    it:name "inc_20" ;
+    it:severity "low" ;
+    it:site "site_4" .
+
+it:sensor_01 a it:Sensor ;
+    it:id "sensor_01" ;
+    it:monitorsResource it:srv_01,
+        it:srv_02 ;
+    it:name "sensor_01" ;
+    it:site "site_1" .
+
+it:sensor_02 a it:Sensor ;
+    it:id "sensor_02" ;
+    it:monitorsResource it:srv_02,
+        it:srv_03 ;
+    it:name "sensor_02" ;
+    it:site "site_1" .
+
+it:sensor_03 a it:Sensor ;
+    it:id "sensor_03" ;
+    it:monitorsResource it:srv_03,
+        it:srv_04 ;
+    it:name "sensor_03" ;
+    it:site "site_1" .
+
+it:sensor_04 a it:Sensor ;
+    it:id "sensor_04" ;
+    it:monitorsResource it:srv_04,
+        it:srv_05 ;
+    it:name "sensor_04" ;
+    it:site "site_1" .
+
+it:sensor_05 a it:Sensor ;
+    it:id "sensor_05" ;
+    it:monitorsResource it:srv_01,
+        it:srv_05 ;
+    it:name "sensor_05" ;
+    it:site "site_1" .
+
+it:sensor_06 a it:Sensor ;
+    it:id "sensor_06" ;
+    it:monitorsResource it:srv_06,
+        it:srv_07 ;
+    it:name "sensor_06" ;
+    it:site "site_2" .
+
+it:sensor_07 a it:Sensor ;
+    it:id "sensor_07" ;
+    it:monitorsResource it:srv_07,
+        it:srv_08 ;
+    it:name "sensor_07" ;
+    it:site "site_2" .
+
+it:sensor_08 a it:Sensor ;
+    it:id "sensor_08" ;
+    it:monitorsResource it:srv_08,
+        it:srv_09 ;
+    it:name "sensor_08" ;
+    it:site "site_2" .
+
+it:sensor_09 a it:Sensor ;
+    it:id "sensor_09" ;
+    it:monitorsResource it:srv_09,
+        it:srv_10 ;
+    it:name "sensor_09" ;
+    it:site "site_2" .
+
+it:sensor_10 a it:Sensor ;
+    it:id "sensor_10" ;
+    it:monitorsResource it:srv_06,
+        it:srv_10 ;
+    it:name "sensor_10" ;
+    it:site "site_2" .
+
+it:sensor_11 a it:Sensor ;
+    it:id "sensor_11" ;
+    it:monitorsResource it:srv_11,
+        it:srv_12 ;
+    it:name "sensor_11" ;
+    it:site "site_3" .
+
+it:sensor_12 a it:Sensor ;
+    it:id "sensor_12" ;
+    it:monitorsResource it:srv_12,
+        it:srv_13 ;
+    it:name "sensor_12" ;
+    it:site "site_3" .
+
+it:sensor_13 a it:Sensor ;
+    it:id "sensor_13" ;
+    it:monitorsResource it:srv_13,
+        it:srv_14 ;
+    it:name "sensor_13" ;
+    it:site "site_3" .
+
+it:sensor_14 a it:Sensor ;
+    it:id "sensor_14" ;
+    it:monitorsResource it:srv_14,
+        it:srv_15 ;
+    it:name "sensor_14" ;
+    it:site "site_3" .
+
+it:sensor_15 a it:Sensor ;
+    it:id "sensor_15" ;
+    it:monitorsResource it:srv_11,
+        it:srv_15 ;
+    it:name "sensor_15" ;
+    it:site "site_3" .
+
+it:sensor_16 a it:Sensor ;
+    it:id "sensor_16" ;
+    it:monitorsResource it:srv_16,
+        it:srv_17 ;
+    it:name "sensor_16" ;
+    it:site "site_4" .
+
+it:sensor_17 a it:Sensor ;
+    it:id "sensor_17" ;
+    it:monitorsResource it:srv_17,
+        it:srv_18 ;
+    it:name "sensor_17" ;
+    it:site "site_4" .
+
+it:sensor_18 a it:Sensor ;
+    it:id "sensor_18" ;
+    it:monitorsResource it:srv_18,
+        it:srv_19 ;
+    it:name "sensor_18" ;
+    it:site "site_4" .
+
+it:sensor_19 a it:Sensor ;
+    it:id "sensor_19" ;
+    it:monitorsResource it:srv_19,
+        it:srv_20 ;
+    it:name "sensor_19" ;
+    it:site "site_4" .
+
+it:sensor_20 a it:Sensor ;
+    it:id "sensor_20" ;
+    it:monitorsResource it:srv_16,
+        it:srv_20 ;
+    it:name "sensor_20" ;
+    it:site "site_4" .
+
+it:hyp_01 a it:Hypervisor ;
+    it:id "hyp_01" ;
+    it:name "hyp_01" ;
+    it:runsVirtualMachine it:vm_01 ;
+    it:site "site_1" .
+
+it:hyp_02 a it:Hypervisor ;
+    it:id "hyp_02" ;
+    it:name "hyp_02" ;
+    it:runsVirtualMachine it:vm_02 ;
+    it:site "site_1" .
+
+it:hyp_03 a it:Hypervisor ;
+    it:id "hyp_03" ;
+    it:name "hyp_03" ;
+    it:runsVirtualMachine it:vm_03 ;
+    it:site "site_1" .
+
+it:hyp_04 a it:Hypervisor ;
+    it:id "hyp_04" ;
+    it:name "hyp_04" ;
+    it:runsVirtualMachine it:vm_04 ;
+    it:site "site_1" .
+
+it:hyp_05 a it:Hypervisor ;
+    it:id "hyp_05" ;
+    it:name "hyp_05" ;
+    it:runsVirtualMachine it:vm_05 ;
+    it:site "site_1" .
+
+it:hyp_06 a it:Hypervisor ;
+    it:id "hyp_06" ;
+    it:name "hyp_06" ;
+    it:runsVirtualMachine it:vm_06 ;
+    it:site "site_2" .
+
+it:hyp_07 a it:Hypervisor ;
+    it:id "hyp_07" ;
+    it:name "hyp_07" ;
+    it:runsVirtualMachine it:vm_07 ;
+    it:site "site_2" .
+
+it:hyp_08 a it:Hypervisor ;
+    it:id "hyp_08" ;
+    it:name "hyp_08" ;
+    it:runsVirtualMachine it:vm_08 ;
+    it:site "site_2" .
+
+it:hyp_09 a it:Hypervisor ;
+    it:id "hyp_09" ;
+    it:name "hyp_09" ;
+    it:runsVirtualMachine it:vm_09 ;
+    it:site "site_2" .
+
+it:hyp_10 a it:Hypervisor ;
+    it:id "hyp_10" ;
+    it:name "hyp_10" ;
+    it:runsVirtualMachine it:vm_10 ;
+    it:site "site_2" .
+
+it:hyp_11 a it:Hypervisor ;
+    it:id "hyp_11" ;
+    it:name "hyp_11" ;
+    it:runsVirtualMachine it:vm_11 ;
+    it:site "site_3" .
+
+it:hyp_12 a it:Hypervisor ;
+    it:id "hyp_12" ;
+    it:name "hyp_12" ;
+    it:runsVirtualMachine it:vm_12 ;
+    it:site "site_3" .
+
+it:hyp_13 a it:Hypervisor ;
+    it:id "hyp_13" ;
+    it:name "hyp_13" ;
+    it:runsVirtualMachine it:vm_13 ;
+    it:site "site_3" .
+
+it:hyp_14 a it:Hypervisor ;
+    it:id "hyp_14" ;
+    it:name "hyp_14" ;
+    it:runsVirtualMachine it:vm_14 ;
+    it:site "site_3" .
+
+it:hyp_15 a it:Hypervisor ;
+    it:id "hyp_15" ;
+    it:name "hyp_15" ;
+    it:runsVirtualMachine it:vm_15 ;
+    it:site "site_3" .
+
+it:hyp_16 a it:Hypervisor ;
+    it:id "hyp_16" ;
+    it:name "hyp_16" ;
+    it:runsVirtualMachine it:vm_16 ;
+    it:site "site_4" .
+
+it:hyp_17 a it:Hypervisor ;
+    it:id "hyp_17" ;
+    it:name "hyp_17" ;
+    it:runsVirtualMachine it:vm_17 ;
+    it:site "site_4" .
+
+it:hyp_18 a it:Hypervisor ;
+    it:id "hyp_18" ;
+    it:name "hyp_18" ;
+    it:runsVirtualMachine it:vm_18 ;
+    it:site "site_4" .
+
+it:hyp_19 a it:Hypervisor ;
+    it:id "hyp_19" ;
+    it:name "hyp_19" ;
+    it:runsVirtualMachine it:vm_19 ;
+    it:site "site_4" .
+
+it:hyp_20 a it:Hypervisor ;
+    it:id "hyp_20" ;
+    it:name "hyp_20" ;
+    it:runsVirtualMachine it:vm_20 ;
+    it:site "site_4" .
+
+it:srv_01 a it:ComputeServer ;
+    it:hostsResource it:hyp_01 ;
+    it:id "srv_01" ;
+    it:name "srv_01" ;
+    it:site "site_1" .
+
+it:srv_02 a it:ComputeServer ;
+    it:hostsResource it:hyp_02 ;
+    it:id "srv_02" ;
+    it:name "srv_02" ;
+    it:site "site_1" .
+
+it:srv_03 a it:ComputeServer ;
+    it:hostsResource it:hyp_03 ;
+    it:id "srv_03" ;
+    it:name "srv_03" ;
+    it:site "site_1" .
+
+it:srv_04 a it:ComputeServer ;
+    it:hostsResource it:hyp_04 ;
+    it:id "srv_04" ;
+    it:name "srv_04" ;
+    it:site "site_1" .
+
+it:srv_05 a it:ComputeServer ;
+    it:hostsResource it:hyp_05 ;
+    it:id "srv_05" ;
+    it:name "srv_05" ;
+    it:site "site_1" .
+
+it:srv_06 a it:ComputeServer ;
+    it:hostsResource it:hyp_06 ;
+    it:id "srv_06" ;
+    it:name "srv_06" ;
+    it:site "site_2" .
+
+it:srv_07 a it:ComputeServer ;
+    it:hostsResource it:hyp_07 ;
+    it:id "srv_07" ;
+    it:name "srv_07" ;
+    it:site "site_2" .
+
+it:srv_08 a it:ComputeServer ;
+    it:hostsResource it:hyp_08 ;
+    it:id "srv_08" ;
+    it:name "srv_08" ;
+    it:site "site_2" .
+
+it:srv_09 a it:ComputeServer ;
+    it:hostsResource it:hyp_09 ;
+    it:id "srv_09" ;
+    it:name "srv_09" ;
+    it:site "site_2" .
+
+it:srv_10 a it:ComputeServer ;
+    it:hostsResource it:hyp_10 ;
+    it:id "srv_10" ;
+    it:name "srv_10" ;
+    it:site "site_2" .
+
+it:srv_11 a it:ComputeServer ;
+    it:hostsResource it:hyp_11 ;
+    it:id "srv_11" ;
+    it:name "srv_11" ;
+    it:site "site_3" .
+
+it:srv_12 a it:ComputeServer ;
+    it:hostsResource it:hyp_12 ;
+    it:id "srv_12" ;
+    it:name "srv_12" ;
+    it:site "site_3" .
+
+it:srv_13 a it:ComputeServer ;
+    it:hostsResource it:hyp_13 ;
+    it:id "srv_13" ;
+    it:name "srv_13" ;
+    it:site "site_3" .
+
+it:srv_14 a it:ComputeServer ;
+    it:hostsResource it:hyp_14 ;
+    it:id "srv_14" ;
+    it:name "srv_14" ;
+    it:site "site_3" .
+
+it:srv_15 a it:ComputeServer ;
+    it:hostsResource it:hyp_15 ;
+    it:id "srv_15" ;
+    it:name "srv_15" ;
+    it:site "site_3" .
+
+it:srv_16 a it:ComputeServer ;
+    it:hostsResource it:hyp_16 ;
+    it:id "srv_16" ;
+    it:name "srv_16" ;
+    it:site "site_4" .
+
+it:srv_17 a it:ComputeServer ;
+    it:hostsResource it:hyp_17 ;
+    it:id "srv_17" ;
+    it:name "srv_17" ;
+    it:site "site_4" .
+
+it:srv_18 a it:ComputeServer ;
+    it:hostsResource it:hyp_18 ;
+    it:id "srv_18" ;
+    it:name "srv_18" ;
+    it:site "site_4" .
+
+it:srv_19 a it:ComputeServer ;
+    it:hostsResource it:hyp_19 ;
+    it:id "srv_19" ;
+    it:name "srv_19" ;
+    it:site "site_4" .
+
+it:srv_20 a it:ComputeServer ;
+    it:hostsResource it:hyp_20 ;
+    it:id "srv_20" ;
+    it:name "srv_20" ;
+    it:site "site_4" .
+
+it:vm_01 a it:VirtualMachine ;
+    it:dependsOn it:vm_02 ;
+    it:id "vm_01" ;
+    it:isHostedOn it:hyp_01 ;
+    it:name "vm_01" ;
+    it:site "site_1" .
+
+it:vm_06 a it:VirtualMachine ;
+    it:dependsOn it:vm_07 ;
+    it:id "vm_06" ;
+    it:isHostedOn it:hyp_06 ;
+    it:name "vm_06" ;
+    it:site "site_2" .
+
+it:vm_11 a it:VirtualMachine ;
+    it:dependsOn it:vm_12 ;
+    it:id "vm_11" ;
+    it:isHostedOn it:hyp_11 ;
+    it:name "vm_11" ;
+    it:site "site_3" .
+
+it:vm_16 a it:VirtualMachine ;
+    it:dependsOn it:vm_17 ;
+    it:id "vm_16" ;
+    it:isHostedOn it:hyp_16 ;
+    it:name "vm_16" ;
+    it:site "site_4" .
+
+it:vm_05 a it:VirtualMachine ;
+    it:id "vm_05" ;
+    it:isHostedOn it:hyp_05 ;
+    it:name "vm_05" ;
+    it:site "site_1" .
+
+it:vm_10 a it:VirtualMachine ;
+    it:id "vm_10" ;
+    it:isHostedOn it:hyp_10 ;
+    it:name "vm_10" ;
+    it:site "site_2" .
+
+it:vm_15 a it:VirtualMachine ;
+    it:id "vm_15" ;
+    it:isHostedOn it:hyp_15 ;
+    it:name "vm_15" ;
+    it:site "site_3" .
+
+it:vm_20 a it:VirtualMachine ;
+    it:id "vm_20" ;
+    it:isHostedOn it:hyp_20 ;
+    it:name "vm_20" ;
+    it:site "site_4" .
+
+it:vm_02 a it:VirtualMachine ;
+    it:dependsOn it:vm_03 ;
+    it:id "vm_02" ;
+    it:isHostedOn it:hyp_02 ;
+    it:name "vm_02" ;
+    it:site "site_1" .
+
+it:vm_03 a it:VirtualMachine ;
+    it:dependsOn it:vm_04 ;
+    it:id "vm_03" ;
+    it:isHostedOn it:hyp_03 ;
+    it:name "vm_03" ;
+    it:site "site_1" .
+
+it:vm_04 a it:VirtualMachine ;
+    it:dependsOn it:vm_05 ;
+    it:id "vm_04" ;
+    it:isHostedOn it:hyp_04 ;
+    it:name "vm_04" ;
+    it:site "site_1" .
+
+it:vm_07 a it:VirtualMachine ;
+    it:dependsOn it:vm_08 ;
+    it:id "vm_07" ;
+    it:isHostedOn it:hyp_07 ;
+    it:name "vm_07" ;
+    it:site "site_2" .
+
+it:vm_08 a it:VirtualMachine ;
+    it:dependsOn it:vm_09 ;
+    it:id "vm_08" ;
+    it:isHostedOn it:hyp_08 ;
+    it:name "vm_08" ;
+    it:site "site_2" .
+
+it:vm_09 a it:VirtualMachine ;
+    it:dependsOn it:vm_10 ;
+    it:id "vm_09" ;
+    it:isHostedOn it:hyp_09 ;
+    it:name "vm_09" ;
+    it:site "site_2" .
+
+it:vm_12 a it:VirtualMachine ;
+    it:dependsOn it:vm_13 ;
+    it:id "vm_12" ;
+    it:isHostedOn it:hyp_12 ;
+    it:name "vm_12" ;
+    it:site "site_3" .
+
+it:vm_13 a it:VirtualMachine ;
+    it:dependsOn it:vm_14 ;
+    it:id "vm_13" ;
+    it:isHostedOn it:hyp_13 ;
+    it:name "vm_13" ;
+    it:site "site_3" .
+
+it:vm_14 a it:VirtualMachine ;
+    it:dependsOn it:vm_15 ;
+    it:id "vm_14" ;
+    it:isHostedOn it:hyp_14 ;
+    it:name "vm_14" ;
+    it:site "site_3" .
+
+it:vm_17 a it:VirtualMachine ;
+    it:dependsOn it:vm_18 ;
+    it:id "vm_17" ;
+    it:isHostedOn it:hyp_17 ;
+    it:name "vm_17" ;
+    it:site "site_4" .
+
+it:vm_18 a it:VirtualMachine ;
+    it:dependsOn it:vm_19 ;
+    it:id "vm_18" ;
+    it:isHostedOn it:hyp_18 ;
+    it:name "vm_18" ;
+    it:site "site_4" .
+
+it:vm_19 a it:VirtualMachine ;
+    it:dependsOn it:vm_20 ;
+    it:id "vm_19" ;
+    it:isHostedOn it:hyp_19 ;
+    it:name "vm_19" ;
+    it:site "site_4" .
+

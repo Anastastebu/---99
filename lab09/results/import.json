@@ -1,0 +1,71 @@
+{
+  "versions": [
+    {
+      "name": "Neo4j Kernel",
+      "versions": [
+        "5.26.0"
+      ],
+      "edition": "enterprise"
+    }
+  ],
+  "first": {
+    "nodes": 120,
+    "relationships": 216
+  },
+  "second": {
+    "nodes": 120,
+    "relationships": 216
+  },
+  "violation": {
+    "code": "Neo.ClientError.Schema.ConstraintValidationFailed",
+    "message": "Node(0) already exists with label `Resource` and property `id` = 'srv_01'"
+  },
+  "constraints": [
+    {
+      "name": "incident_id",
+      "type": "UNIQUENESS"
+    },
+    {
+      "name": "resource_id",
+      "type": "UNIQUENESS"
+    }
+  ],
+  "indexes": [
+    {
+      "name": "incident_id",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "owningConstraint": "incident_id"
+    },
+    {
+      "name": "incident_severity",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "owningConstraint": null
+    },
+    {
+      "name": "index_343aff4e",
+      "type": "LOOKUP",
+      "state": "ONLINE",
+      "owningConstraint": null
+    },
+    {
+      "name": "index_f7700477",
+      "type": "LOOKUP",
+      "state": "ONLINE",
+      "owningConstraint": null
+    },
+    {
+      "name": "resource_id",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "owningConstraint": "resource_id"
+    },
+    {
+      "name": "resource_site",
+      "type": "RANGE",
+      "state": "ONLINE",
+      "owningConstraint": null
+    }
+  ]
+}

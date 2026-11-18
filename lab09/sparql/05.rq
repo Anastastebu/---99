@@ -1,0 +1,5 @@
+PREFIX it: <http://example.org/it_infrastructure#>
+SELECT ?vm ?dependency WHERE {
+  it:vm_01 it:id ?vm .
+  OPTIONAL { it:vm_01 it:dependsOn ?d . ?d it:id ?dependency . }
+} ORDER BY ?dependency

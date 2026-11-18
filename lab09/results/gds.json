@@ -1,0 +1,114 @@
+{
+  "version": [
+    {
+      "version": "2.13.1"
+    }
+  ],
+  "projection": [
+    {
+      "graphName": "lab09_topology",
+      "nodeCount": 120,
+      "relationshipCount": 392
+    }
+  ],
+  "rank": [
+    {
+      "nodePropertiesWritten": 120,
+      "ranIterations": 88,
+      "didConverge": true
+    }
+  ],
+  "louvain": [
+    {
+      "communityCount": 4,
+      "modularity": 0.7499999999999999,
+      "nodePropertiesWritten": 120
+    }
+  ],
+  "top": [
+    {
+      "id": "vm_02",
+      "site": "site_1",
+      "pagerank": 1.9568099808495671
+    },
+    {
+      "id": "vm_04",
+      "site": "site_1",
+      "pagerank": 1.9568099808495671
+    },
+    {
+      "id": "vm_07",
+      "site": "site_2",
+      "pagerank": 1.9568099808495671
+    },
+    {
+      "id": "vm_09",
+      "site": "site_2",
+      "pagerank": 1.9568099808495671
+    },
+    {
+      "id": "vm_12",
+      "site": "site_3",
+      "pagerank": 1.9568099808495671
+    },
+    {
+      "id": "vm_14",
+      "site": "site_3",
+      "pagerank": 1.9568099808495671
+    },
+    {
+      "id": "vm_17",
+      "site": "site_4",
+      "pagerank": 1.9568099808495671
+    },
+    {
+      "id": "vm_19",
+      "site": "site_4",
+      "pagerank": 1.9568099808495671
+    },
+    {
+      "id": "vm_03",
+      "site": "site_1",
+      "pagerank": 1.9430453801762309
+    },
+    {
+      "id": "vm_08",
+      "site": "site_2",
+      "pagerank": 1.9430453801762309
+    }
+  ],
+  "groups": [
+    {
+      "community": 41,
+      "nodes": 30,
+      "sites": [
+        "site_1"
+      ]
+    },
+    {
+      "community": 46,
+      "nodes": 30,
+      "sites": [
+        "site_2"
+      ]
+    },
+    {
+      "community": 51,
+      "nodes": 30,
+      "sites": [
+        "site_3"
+      ]
+    },
+    {
+      "community": 56,
+      "nodes": 30,
+      "sites": [
+        "site_4"
+      ]
+    }
+  ],
+  "written": {
+    "pagerank": 120,
+    "community": 120
+  }
+}

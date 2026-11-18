@@ -1,0 +1,5 @@
+PREFIX it: <http://example.org/it_infrastructure#>
+SELECT ?site (COUNT(DISTINCT ?i) AS ?incidents) WHERE {
+  ?i a it:Incident ; it:detectedBy ?s .
+  ?s a it:Sensor ; it:site ?site .
+} GROUP BY ?site ORDER BY ?site

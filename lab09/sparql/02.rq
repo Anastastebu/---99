@@ -1,0 +1,4 @@
+PREFIX it: <http://example.org/it_infrastructure#>
+SELECT ?sensor WHERE {
+  ?s a it:Sensor ; it:monitorsResource it:srv_01 ; it:id ?sensor .
+} ORDER BY ?sensor

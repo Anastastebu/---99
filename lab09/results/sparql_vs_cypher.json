@@ -1,0 +1,79 @@
+[
+  {
+    "cq": 1,
+    "rows": [
+      {
+        "vm": "vm_01"
+      }
+    ],
+    "cypher_chars": 143,
+    "sparql_chars": 157,
+    "cypher_ms": 23.621500004082918,
+    "sparql_ms": 9.18670000100974
+  },
+  {
+    "cq": 2,
+    "rows": [
+      {
+        "sensor": "sensor_01"
+      },
+      {
+        "sensor": "sensor_05"
+      }
+    ],
+    "cypher_chars": 107,
+    "sparql_chars": 159,
+    "cypher_ms": 23.375000004307367,
+    "sparql_ms": 9.407899997313507
+  },
+  {
+    "cq": 3,
+    "rows": [
+      {
+        "incident": "inc_01"
+      }
+    ],
+    "cypher_chars": 121,
+    "sparql_chars": 178,
+    "cypher_ms": 22.480300001916476,
+    "sparql_ms": 10.720400008722208
+  },
+  {
+    "cq": 4,
+    "rows": [
+      {
+        "site": "site_1",
+        "incidents": 5
+      },
+      {
+        "site": "site_2",
+        "incidents": 5
+      },
+      {
+        "site": "site_3",
+        "incidents": 5
+      },
+      {
+        "site": "site_4",
+        "incidents": 5
+      }
+    ],
+    "cypher_chars": 134,
+    "sparql_chars": 213,
+    "cypher_ms": 23.85229998617433,
+    "sparql_ms": 27.48470001097303
+  },
+  {
+    "cq": 5,
+    "rows": [
+      {
+        "vm": "vm_01",
+        "dependency": "vm_02"
+      }
+    ],
+    "cypher_chars": 148,
+    "sparql_chars": 192,
+    "cypher_ms": 21.787099991342984,
+    "sparql_ms": 11.397599999327213
+  }
+]
